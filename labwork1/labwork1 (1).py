@@ -1,14 +1,14 @@
-# ==== Labwork 1 ====
+# ==== Ex 1 ====
 a = 10
 area = 3.14 * (a**2)
 print('area of a cirle is', area)
 
-# ==== Labwork 2 ====
+# ==== Ex 2 ====
 C = 10
 F = (C * 1.8) + 32
 print('the temperature in Fahrenheit is', F)
 
-# ==== Labwork 3 ====
+# ==== Ex 3 ====
 n = int(input('Nhap n: '))
 is_prime = True
 
@@ -24,7 +24,7 @@ if is_prime:
 else:
     print(f"{n} is NOT prime number")
 
-# ==== Labwork 4 ====
+# ==== Ex 4 ====
 n = int(input('Nhap n: '))
 divisor_sum = 0
 for i in range(1,n):
@@ -35,7 +35,7 @@ if divisor_sum == n:
 else:
     print(f"{n} is NOT perfect number")
     
-# ==== Labwork 5 ====
+# ==== Ex 5 ====
 fav = ["orange", "blue", "green", "white"]
 color = input('What is your favorite color?')
 
@@ -46,7 +46,7 @@ for i in range (len(fav)):
 else:
     print(f"Sorry, I could not find your color")
     
-# ==== Labwork 6 ====
+# ==== Ex 6 ====
 range1 = range(0,7)
 print([ i for i in range1])
 range2 = range(1, 13, 3)
@@ -56,25 +56,23 @@ print([ i for i in range3])
 range4 = range(6, -4, -2)
 print([ i for i in range4])
 
-# ==== Labwork 7 ====
-def remove_dollar_sign(s):  
-    out = ""
-    for c in s: 
-        if c != "$":  
-            out = out + c  
-    return out
-print(remove_dollar_sign("huy$$"))
+# ==== Ex 7 ====
+def remove_dollar_sign(s):
+    return s.replace("$", "")
 
-# ==== Labwork 8 ====
+text_input = input("Enter a string with dollar signs: ")
+result = remove_dollar_sign(text_input)
+print(f"Result: {result}")
+# ==== Ex 8 ====
 def extract_even(l):
-    result = [] 
+    result = [] #list rỗng để chứa các số chắn tìm được
     for x in l:
         if x % 2 == 0:
-            result.append(x) 
-    return result            
+            result.append(x) #nếu chẵn thêm vào result
+    return result            #trả về list mới
 print(extract_even([1,2,5,-1,4,10]))
 
-# ==== Labwork 9 ====
+# ==== Ex 9 ====
 def factorial(n):
     result = 1
     for i in range(1, n + 1):
@@ -82,7 +80,7 @@ def factorial(n):
     return result
 print(factorial(5))
 
-# ==== Labwork 10 ====
+# ==== Ex 10 ====
 def get_divisors(n):
     out = []
     for i in range(1, n+1):
@@ -91,7 +89,7 @@ def get_divisors(n):
     return out
 print(get_divisors(100))
 
-# ==== Labwork 11 ====
+# ==== Ex 11 ====
 import math
 
 x1 = float(input("Enter x1: "))
@@ -102,7 +100,7 @@ y2 = float(input("Enter y2: "))
 distance = math.sqrt((x2 - x1)**2 + (y2 - y1)**2)
 print("Distance between the points:", distance)
 
-# ==== Labwork 12 ====
+# ==== Ex 12 ====
 m = int(input("Input m rows "))
 n = int(input("Input n columns "))
 for i in range(m):
